@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+  font-family: 'Open Sans';
+}
+
+/* logo */
+.skin-blue .main-header .logo {
+                       background-color: #2671b7;
+                       }
+
+ /* logo when hovered */
+ .skin-blue .main-header .logo:hover {
+                       background-color: #2671b7;
+                       }
+
+ /* navbar (rest of the header) */
+ .skin-blue .main-header .navbar {
+                       background-color: #2671b7;
+                       }  
+ /* toggle button when hovered  */                    
+  .skin-blue .main-header .navbar .sidebar-toggle:hover{
+                       background-color: #1e2352;
+                       }
