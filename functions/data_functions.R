@@ -58,7 +58,7 @@ make_response <- function(response_range, expected_response_design, nobs, type){
                    yerror = "rnorm", xerror = dose, onlyY=TRUE)
   
   sim_data <- if(type == "binomial"){
-                     rescale(as.vector(sim_data$y), to0=c(0,1)) } else {
+                     scales::rescale(as.vector(sim_data$y), to0=c(0,1)) } else {
                      as.vector(sim_data$y) }
   return(sim_data)
   
@@ -86,7 +86,7 @@ if(is.null(groups)){
                                    expected_response_design=expected_response_design,
                                    type=type,
                                    nobs=nobs)
-  #TODO adjust so that the min and max is always in both - make control an unchanged number - which means update the response mechanism to make everything a random value not far from max
+
     if(expected_response_design == "inhibition"){
       experiment_response <- pmin(experiment_response, control_response*.8)
     } else if(expected_response_design == "stimulation") {
